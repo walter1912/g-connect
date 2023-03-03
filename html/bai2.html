@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game tic tac toe</title>
+</head>
+<style>
+    .row {
+        display: flex;
+        flex-direction: row;
+    }
+    .col {
+        border: 1px solid tomato;
+        font-size: 50px;
+        font-weight: 700;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+    }
+    .col[aria-valuetext="X"] {
+        color:darkblue;
+    }
+    .col[aria-valuetext="O"] {
+        color:darkgreen
+    }
+</style>
+<body>
+    <div>
+        <div class="row row1">
+            <div class="col col1" aria-valuetext="X">X</div>
+            <div class="col col2"></div>
+            <div class="col col3"></div>
+        </div>
+        <div class="row row2">
+            <div class="col col1"></div>
+            <div class="col col2" aria-valuetext="O">O</div>
+            <div class="col col3"></div>
+        </div>
+        <div class="row row3">
+            <div class="col col1"></div>
+            <div class="col col2"></div>
+            <div class="col col3"></div>
+        </div>
+    </div>
+</body>
+</html>

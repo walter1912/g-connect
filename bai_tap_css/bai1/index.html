@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- link css local -->
+    <link rel="stylesheet" href="style.css">
+    <title>Danh sách sinh viên</title>
+  </head>
+  
+  <body>
+    <h1>Danh sách sinh viên</h1>
+    <section>
+      <form class="search" action="/searchSV" method="get">
+        <label for="txtTuKhoa" class="search__lbl">Từ khóa:</label>
+        <input
+          type="text"
+          name="txtTuKhoa"
+          id="txtTuKhoa"
+          placeholder="Từ khóa cần tìm kiếm"
+        />
+        <button class="search__btn" type="submit">Tìm kiếm</button>
+      </form>
+      <div class="render">
+        <h2 class="render__title">Kết quả tìm kiếm</h2>
+        <table class="render__tbl">
+          <tr class="render__heading">
+            <th></th>
+            <th>Mã SV</th>
+            <th>Tên sinh viên</th>
+            <th>Ngày sinh</th>
+            <th>Khoa</th>
+            <!-- <th>Khoa</th> -->
+            <th></th>
+            <th></th>
+          </tr>
+          <tr class="render__sv" id="sinhvien1">
+            <td>
+              <input type="checkbox" name="sinhvien1" />
+            </td>
+            <td>B19DCCN432</td>
+            <td>Nguyễn Văn A</td>
+            <td>24/03/2001</td>
+            <td>Công nghệ thông tin</td>
+            <td>
+              <button>
+                <i class="fa-solid fa-pen"></i>
+              </button>
+            </td>
+            <td>
+              <button>
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+          <tr class="render__sv" id="sinhvien2">
+            <td>
+              <input type="checkbox" name="sinhvien2" />
+            </td>
+            <td>B19DCCN342</td>
+            <td>Trần Văn A</td>
+            <td>21/03/2001</td>
+            <td>Công nghệ thông tin</td>
+            <td>
+              <button>
+                <i class="fa-solid fa-pen"></i>
+              </button>
+            </td>
+            <td>
+              <button>
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+          <tr class="render__sv" id="sinhvien3">
+            <td>
+              <input type="checkbox" name="sinhvien3" />
+            </td>
+            <td>B19DCCN478</td>
+            <td>Nguyễn Văn Phúc</td>
+            <td>24/06/2001</td>
+            <td>Công nghệ thông tin</td>
+            <td>
+              <button>
+                <i class="fa-solid fa-pen"></i>
+              </button>
+            </td>
+            <td>
+              <button>
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+          <tr class="render__sv" id="sinhvien4">
+            <td>
+              <input type="checkbox" name="sinhvien4" />
+            </td>
+            <td>B19DCCN122</td>
+            <td>Nguyễn Ngọc A</td>
+            <td>24/12/2001</td>
+            <td>Công nghệ thông tin</td>
+            <td>
+              <button>
+                <i class="fa-solid fa-pen"></i>
+              </button>
+            </td>
+            <td>
+              <button>
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+          <tr class="render__sv" id="sinhvien5">
+            <td>
+              <input type="checkbox" name="sinhvien5" />
+            </td>
+            <td>B19DCCN432</td>
+            <td>Lê Văn Tĩnh</td>
+            <td>14/03/2001</td>
+            <td>Công nghệ thông tin</td>
+            <td>
+              <button>
+                <i class="fa-solid fa-pen"></i>
+              </button>
+            </td>
+            <td>
+              <button>
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+          <tr class="render__sv" id="sinhvien6">
+            <td>
+              <input type="checkbox" name="sinhvien6" />
+            </td>
+            <td>B19DCCN765</td>
+            <td>Nguyễn Văn Ba</td>
+            <td>24/9/2001</td>
+            <td>Công nghệ thông tin</td>
+            <td>
+              <button>
+                <i class="fa-solid fa-pen"></i>
+              </button>
+            </td>
+            <td>
+              <button>
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+          <tr class="render__sv" id="sinhvien7">
+            <td>
+              <input type="checkbox" name="sinhvien7" />
+            </td>
+            <td>B19DCCN987</td>
+            <td>Đào Văn Anh</td>
+            <td>24/03/2001</td>
+            <td>Công nghệ thông tin</td>
+            <td>
+              <button>
+                <i class="fa-solid fa-pen"></i>
+              </button>
+            </td>
+            <td>
+              <button>
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+          <tr class="render__sv" id="sinhvien8">
+            <td>
+              <input type="checkbox" name="sinhvien8" />
+            </td>
+            <td>B19DCCN412</td>
+            <td>Lê Long Nhật</td>
+            <td>09/03/2001</td>
+            <td>Công nghệ thông tin</td>
+            <td>
+              <button>
+                <i class="fa-solid fa-pen"></i>
+              </button>
+            </td>
+            <td>
+              <button>
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+          <tr class="render__sv" id="sinhvien9">
+            <td>
+              <input type="checkbox" name="sinhvien9" />
+            </td>
+            <td>B19DCCN432</td>
+            <td>Nguyễn Văn Cảnh</td>
+            <td>02/06/2001</td>
+            <td>Công nghệ thông tin</td>
+            <td>
+              <button>
+                <i class="fa-solid fa-pen"></i>
+              </button>
+            </td>
+            <td>
+              <button>
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+          <tr class="render__sv" id="sinhvien10">
+            <td>
+              <input type="checkbox" name="sinhvien10" />
+            </td>
+            <td>B19DCCN432</td>
+            <td>Hồ Văn Ngọc</td>
+            <td>02/08/2001</td>
+            <td>Công nghệ thông tin</td>
+            <td>
+              <button>
+                <i class="fa-solid fa-pen"></i>
+              </button>
+            </td>
+            <td>
+              <button>
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <form  class="crud-sv" action="" method="post">
+        <div>
+          <button class="crud-sv__btn" id="themSV">Thêm mới</button>
+          <button class="crud-sv__btn" id="capnhapSV">Cập nhật</button>
+          <button class="crud-sv__btn" id="xoaSV">Xóa</button>
+        </div>
+        <div>
+          <label class="crud-sv__lbl" for="txtMaSV">Mã SV: <sup class="required">*</sup></label>
+          <input required="true" type="text" name="txtMaSV" id="txtMaSV" />
+        </div>
+        <div>
+          <label class="crud-sv__lbl" for="txtTenSV">Tên Sinh Viên: <sup class="required">*</sup></label>
+          <input required="true" type="text" name="txtTenSV" id="txtTenSV" />
+        </div>
+        <div>
+          <label class="crud-sv__lbl" for="txtNgaySinh">Ngày sinh: </label>
+          <input type="text" name="txtNgaySinh" id="txtNgaySinh" />
+        </div>
+        <div>
+          <label class="crud-sv__lbl" for="rdbGioiTinh">Giới tính: </label>
+          <input
+            type="radio"
+            value="Nam"
+            name="rdbGioiTinh"
+            id="rdbGioiTinh"
+          /><span>Nam</span>
+          <input
+            type="radio"
+            value="Nữ"
+            name="rdbGioiTinh"
+            id="rdbGioiTinh"
+          /><span>Nữ</span>
+        </div>
+        <div>
+            <label class="crud-sv__lbl" for="drpKhoa">Khoa: <sup class="required">*</sup></label>
+            <input required="true" list="dsKhoa" name="drpKhoa">
+            <datalist id="dsKhoa">
+              <option value="Công nghệ thông tin">
+              <option value="Công nghệ đa phương tiên">
+              <option value="Kế toán">
+              <option value="Truyền thông đa phương tiên">
+              <option value="An toàn thông tin">
+            </datalist>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>

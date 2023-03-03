@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- link css local -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Danh sách sinh viên</title>
+  </head>
+
+  <body>
+    <h1>Danh sách sinh viên</h1>
+    <section>
+      <form name="searchSV" class="search"  action="#" method="get" onsubmit="event.preventDefault(); ">
+        <input type="hidden" name="ds">
+        <label for="txtTuKhoa" class="search__lbl">Từ khóa:</label>
+        <input
+          type="text"
+          name="txtTuKhoa"
+          id="txtTuKhoa"
+          placeholder="Từ khóa cần tìm kiếm"
+        />
+        <select name="chbType" id="chbType">
+          <option value="TenSV" selected>TenSV</option>
+          <option value="MaSV">MaSV</option>
+          <option value="Khoa">Khoa</option>
+        </select>
+        <button class="search__btn" onclick="handleSearch()">Tìm kiếm</button>
+            
+      </form>
+      <div class="render" id="render">
+        <h2 class="render__title">Kết quả tìm kiếm</h2>
+      </div>
+      <form name="crudSV" class="crud-sv" action="" method="post" onsubmit="event.preventDefault(); ">
+        <div>
+          <button class="crud-sv__btn" id="themSV" onclick="handleAdd()">
+            Thêm mới
+          </button>
+          <button
+            class="crud-sv__btn"
+            id="capnhapSV"
+            onclick="confirmHandleEdit()"
+          >
+            Cập nhật
+          </button>
+          <button
+            class="crud-sv__btn"
+            id="xoaSV"
+            onclick="handleDeleteAll()"
+          >
+            Xóa
+          </button>
+        </div>
+        <div>
+          <label class="crud-sv__lbl" for="txtMaSV"
+            >Mã SV: <sup class="required">*</sup></label
+          >
+          <input  type="text" name="txtMaSV" id="txtMaSV" />
+        </div>
+        <span class="text--warning " id="warningMaSV"></span>
+        <div>
+          <label class="crud-sv__lbl" for="txtTenSV"
+            >Tên Sinh Viên: <sup class="required">*</sup></label
+          >
+          <input  type="text" name="txtTenSV" id="txtTenSV" />
+        </div>
+        <span class="text--warning" id="warningTenSV"></span>
+        <div>
+          <label class="crud-sv__lbl" for="txtNgaySinh">Ngày sinh: </label>
+          <input type="text" name="txtNgaySinh" id="txtNgaySinh" />
+        </div>
+        <div>
+          <label class="crud-sv__lbl" for="rdbGioiTinh">Giới tính: </label>
+          <input
+            type="radio"
+            value="Nam"
+            name="rdbGioiTinh"
+            id="rdbGioiTinh"
+          /><span>Nam</span>
+          <input
+            type="radio"
+            value="Nữ"
+            name="rdbGioiTinh"
+            id="rdbGioiTinh"
+          /><span>Nữ</span>
+        </div>
+        <div>
+          <label class="crud-sv__lbl" for="drpKhoa"
+            >Khoa: <sup class="required">*</sup></label
+          >
+          <input  list="dsKhoa" name="drpKhoa" />
+          <datalist id="dsKhoa">
+            <option value="Công nghệ thông tin"></option>
+            <option value="Công nghệ đa phương tiên"></option>
+            <option value="Kế toán"></option>
+            <option value="Truyền thông đa phương tiên"></option>
+            <option value="An toàn thông tin"></option>
+          </datalist>
+        </div>
+        <span class="text--warning" id="warningKhoa"></span>          
+      </form>
+    </section>
+
+    <button onclick="removeLocalStorage('listSinhVien')">
+      removeLocalStorage
+    </button>
+   <script src="./script.js"></script>
+  </body>
+</html>
