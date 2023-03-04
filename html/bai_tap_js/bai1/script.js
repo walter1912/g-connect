@@ -213,7 +213,6 @@ function searchByTenSV(keyword) {
 function searchByMaSV(keyword) {
   dsSV = danhsachSV.getListSinhVien();
   console.log('search ');
-
     return dsSV.filter( sv => (sv.MaSV.includes(keyword) ) );
 }
 // tìm kiếm theo tên khoa 

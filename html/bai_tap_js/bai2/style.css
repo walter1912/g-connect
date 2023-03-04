@@ -6,7 +6,7 @@
     --border-color: black;
 }
 section {
-    height: 100vh;
+    /* height: 100vh; */
     padding-top: 40px;
     padding-bottom: 80px;
     margin-bottom: 50px;
@@ -47,9 +47,10 @@ section {
  
 }
 
-.col[aria-valuetext="x"] button{
+button[data-text='x']{
   color: darkblue;
 }
-.col[aria-valuetext="o"] button{
+button[data-text='o']{
   color: darkgreen;
 }
+

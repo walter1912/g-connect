@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- link css local -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Game tic tac toe</title>
   </head>
- 
+
   <body>
     <section>
       <div class="description">
@@ -19,57 +19,22 @@
           </label>
         </div>
         <div class="des_players">
-          <p>
+          <p class="player1">
             <span>Người chơi X: </span>
             <span>Nguyễn Văn Anh</span>
           </p>
-          <p>
+          <p class="player2">
             <span>Người chơi O: </span>
             <span>Lê Văn Đạt</span>
           </p>
-          <div class="des_nextPlayer">
+          <div class="des_nextPlayer" data-currentPlayer="player1">
             Đến lượt người chơi <span>X</span>
           </div>
         </div>
       </div>
       <div class="tik-tac-toe">
-        <div class="row row1">
-          <div class="col col1" aria-valuetext="x">
-            <button>x</button>
-          </div>
-          <div class="col col2">
-            <button></button>
-          </div>
-          <div class="col col3">
-            <button></button>
-          </div>
-        </div>
-        <div class="row row2">
-          <div class="col col1">
-            <button></button>
-          </div>
-          <div class="col col2" aria-valuetext="o">
-            <button>o</button>
-          </div>
-          <div class="col col3">
-            <button></button>
-          </div>
-        </div>
-        <div class="row row3">
-          <div class="col col1">
-            <button></button>
-          </div>
-          <div class="col col2">
-            <button></button>
-          </div>
-          <div class="col col3">
-            <button></button>
-          </div>
-        </div>
       </div>
     </section>
-    <script>
-        
-    </script>
+  <script src="./script.js"></script>
   </body>
 </html>
