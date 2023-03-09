@@ -1,8 +1,8 @@
 "use strict";
 //  create matrix
-const ROW = 3;
-const COLUMN = 3;
-const lineVictory = 5;
+const ROW = 5;
+const COLUMN = 7;
+const lineVictory = 4;
 
 // function create button ROW*COLUMN
 function createTableTTT(row, col) {
@@ -51,23 +51,23 @@ function handlePlay(element) {
     element.setAttribute("data-text", "x");
     $des_nextPlayer.setAttribute("data-currentPlayer", "player2");
     $des_nextPlayer.querySelector("span").innerText = "O";
-    checkAllCase();
+    checkAllCase(currentPlayer);
   } else {
     element.innerText = "o";
     element.setAttribute("data-text", "o");
     $des_nextPlayer.setAttribute("data-currentPlayer", "player1");
     $des_nextPlayer.querySelector("span").innerText = "X";
-    checkAllCase();
+    checkAllCase(currentPlayer);
   }
 }
-function checkAllCase() {
+function checkAllCase(currentPlayer) {
   if (
     checkWin("row", lineVictory, 1, ROW) ||
     checkWin("column", lineVictory, 1, ROW) ||
     checkWin("cheo1", lineVictory, -ROW + 1, ROW - 1) ||
     checkWin("cheo2", lineVictory, 2, ROW * 2)
   ) {
-    alert("player victory: " + "người chơi 2");
+    alert("player victory: " + "người chơi "+currentPlayer);
   } else {
     // trường hợp hòa
     if (checkEmpty() == false) {
